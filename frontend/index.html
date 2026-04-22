@@ -1,47 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Employee Registration Portal</title>
+    <title>منصة الموارد البشرية الرقمية</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Employee Registration Portal</h1>
-    <form action="#" method="POST">
-        <label for="first_name">First Name:</label><br>
-        <input type="text" id="first_name" name="first_name" required><br>
-
-        <label for="last_name">Last Name:</label><br>
-        <input type="text" id="last_name" name="last_name" required><br>
-
-        <label for="position">Position:</label><br>
-        <select id="position" name="position">
-            <option value="Professor">Professor</option>
-            <option value="Administrator">Administrator</option>
-            <option value="Professional Worker">Professional Worker</option>
-        </select><br>
-
-        <label>Contact Method:</label><br>
-        <input type="radio" id="email" name="contact_method" value="Email" required>
-        <label for="email">Email</label><br>
-        <input type="radio" id="phone" name="contact_method" value="Phone">
-        <label for="phone">Phone</label><br>
-
-        <h2>Department</h2>
-        <input type="radio" id="user_services" name="department" value="User Services" required>
-        <label for="user_services">User Services</label><br>
-        <input type="radio" id="payroll" name="department" value="Payroll">
-        <label for="payroll">Payroll</label><br>
-
-        <h2>Request Type</h2>
-        <input type="radio" id="inquiry" name="request_type" value="Inquiry" required>
-        <label for="inquiry">Inquiry</label><br>
-        <input type="radio" id="document_request" name="request_type" value="Document Request">
-        <label for="document_request">Document Request</label><br>
-        <input type="radio" id="complaint" name="request_type" value="Complaint">
-        <label for="complaint">Complaint</label><br>
-
-        <input type="submit" value="Submit">
-    </form>
+    <header>
+        <h1>منصة الموارد البشرية الرقمية</h1>
+    </header>
+    <main>
+        <section id="employee-registration">
+            <h2>تسجيل بيانات الموظف</h2>
+            <form>
+                <label for="name">الاسم:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="surname">اللقب:</label>
+                <input type="text" id="surname" name="surname" required>
+                <label for="position">المسمى الوظيفي:</label>
+                <input type="text" id="position" name="position" required>
+                <label for="contact-method">طريقة الاتصال:</label>
+                <select id="contact-method" name="contact-method" required>
+                    <option value="email">البريد الإلكتروني</option>
+                    <option value="phone">الهاتف</option>
+                </select>
+                <button type="submit">تسجيل</button>
+            </form>
+        </section>
+        <section id="intelligent-routing">
+            <h2>نظام التوجيه الذكي</h2>
+            <form>
+                <label for="user-services">اختر خدمات المستخدم أو قسم الرواتب:</label>
+                <select id="user-services" name="user-services" required>
+                    <option value="user-services">خدمات المستخدم</option>
+                    <option value="payroll">قسم الرواتب</option>
+                </select>
+                <label for="request-type">نوع الطلب:</label>
+                <select id="request-type" name="request-type" required>
+                    <option value="inquiries">استفسارات</option>
+                    <option value="documents">مستندات</option>
+                    <option value="complaints">شكاوى</option>
+                </select>
+                <button type="submit">إرسال الطلب</button>
+            </form>
+        </section>
+        <section id="chatbot-modal">
+            <h2>الدردشة الآلية</h2>
+            <button id="open-chatbot">فتح الدردشة الآلية</button>
+            <div id="chatbot" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <p>كيف يمكنني مساعدتك اليوم؟</p>
+                </div>
+            </div>
+        </section>
+        <section id="admin-dashboard">
+            <h2>لوحة التحكم الإدارية</h2>
+            <div id="statistics">
+                <p>إحصائيات الطلبات والمستخدمين.</p>
+            </div>
+            <table id="requests-table">
+                <tr>
+                    <th>الاسم</th>
+                    <th>النظام</th>
+                    <th>نوع الطلب</th>
+                </tr>
+                <tr>
+                    <td>محمد</td>
+                    <td>خدمة المستخدم</td>
+                    <td>استفسار</td>
+                </tr>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <p>حقوق النشر &copy; 2026 منصة الموارد البشرية الرقمية</p>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
