@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Registration Portal</title>
+</head>
+<body>
+    <h1>Employee Registration Portal</h1>
+    <form action="#" method="POST">
+        <label for="first_name">First Name:</label><br>
+        <input type="text" id="first_name" name="first_name" required><br>
+
+        <label for="last_name">Last Name:</label><br>
+        <input type="text" id="last_name" name="last_name" required><br>
+
+        <label for="position">Position:</label><br>
+        <select id="position" name="position">
+            <option value="Professor">Professor</option>
+            <option value="Administrator">Administrator</option>
+            <option value="Professional Worker">Professional Worker</option>
+        </select><br>
+
+        <label>Contact Method:</label><br>
+        <input type="radio" id="email" name="contact_method" value="Email" required>
+        <label for="email">Email</label><br>
+        <input type="radio" id="phone" name="contact_method" value="Phone">
+        <label for="phone">Phone</label><br>
+
+        <h2>Department</h2>
+        <input type="radio" id="user_services" name="department" value="User Services" required>
+        <label for="user_services">User Services</label><br>
+        <input type="radio" id="payroll" name="department" value="Payroll">
+        <label for="payroll">Payroll</label><br>
+
+        <h2>Request Type</h2>
+        <input type="radio" id="inquiry" name="request_type" value="Inquiry" required>
+        <label for="inquiry">Inquiry</label><br>
+        <input type="radio" id="document_request" name="request_type" value="Document Request">
+        <label for="document_request">Document Request</label><br>
+        <input type="radio" id="complaint" name="request_type" value="Complaint">
+        <label for="complaint">Complaint</label><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
